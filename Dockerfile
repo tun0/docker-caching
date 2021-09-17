@@ -4,4 +4,5 @@ RUN apk add --no-cache php
 
 FROM build as deploy
 RUN apk add --no-cache redis
+RUN apk add --no-cache zip
 COPY src/ /app/
