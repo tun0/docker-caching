@@ -82,7 +82,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: docker-cache-${{ github.sha }}
-          path: /tmp/.build-cache
+          path: /tmp/.buildx-cache
 
           # - name: Cache Docker layers
       #   uses: actions/cache@v2
