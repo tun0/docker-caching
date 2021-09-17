@@ -58,7 +58,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: docker-cache-${{ github.sha }}
-          path: /tmp/.build-cache
+          path: /tmp/.buildx-cache
 
   run_tests:
     runs-on: ubuntu-latest
