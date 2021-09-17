@@ -9,8 +9,8 @@ COPY src/ /app/
 
 FROM build AS test
 RUN apk add --no-cache unzip
-COPY --from=deploy /app/ /app/
+COPY --from=build /app/ /app/
 
 FROM build AS deploy
 RUN apk add --no-cache zip
-COPY --from=deploy /app/ /app/
+COPY --from=build /app/ /app/
