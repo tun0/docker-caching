@@ -88,5 +88,5 @@ jobs:
           target: test
           push: false
           tags: ${{ steps.prep.outputs.tagged_image }}
-          cache-from: type=local,src=/tmp/.buildx-cache-tmp
+          cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,mode=max,dest=/tmp/.buildx-cache-new
